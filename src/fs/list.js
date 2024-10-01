@@ -1,5 +1,3 @@
-const list = async () => {
-    // Write your code here 
-};
+const list = async () => {};
 
 await list();

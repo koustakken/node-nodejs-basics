@@ -1,5 +1,3 @@
-const rename = async () => {
-    // Write your code here 
-};
+const rename = async () => {};
 
 await rename();

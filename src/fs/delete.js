@@ -1,5 +1,3 @@
-const remove = async () => {
-    // Write your code here 
-};
+const remove = async () => {};
 
 await remove();
