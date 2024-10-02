@@ -1,14 +1,16 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import { getDirname, checkFileExists } from "../utils/utils.js";
-
-const __dirname = getDirname(import.meta.url);
-console.log(__dirname);
+import { getDirname, checkPathExists } from "../utils/utils.js";
 
 const create = async () => {
-  const createFilePath = path.join(__dirname, "files", "fresh.txt");
+  const createFilePath = path.join(
+    getDirname(import.meta.url),
+    "files",
+    "create.txt"
+  );
+
   try {
-    const isFileExists = await checkFileExists(createFilePath);
+    const isFileExists = await checkPathExists(createFilePath);
 
     if (isFileExists) {
       throw new Error("FS operation failed");

@@ -5,9 +5,9 @@ import { fileURLToPath } from "node:url";
 export const getDirname = (url) => path.dirname(getFilename(url));
 export const getFilename = (url) => fileURLToPath(url);
 
-export const checkFileExists = async (filePath) => {
+export const checkPathExists = async (path) => {
   try {
-    await fs.access(filePath);
+    await fs.access(path);
     return true;
   } catch {
     return false;
